@@ -6,7 +6,7 @@ import VerticalLine from "./components/VerticalLine";
 
 function App() {
   return (
-    <div className="flex justify-center w-full font-serif">
+    <div className="flex justify-center w-full nato-serif">
       <div className="max-w-screen-myxl">
         <Navbar />
         <Opinion />

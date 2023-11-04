@@ -20,6 +20,9 @@ module.exports = {
         mylg: "1200px",
         myxl: "1440px",
       },
+      fontFamily: {
+        'serif': ['Noto Serif', 'serif'],
+      },
     },
   },
   plugins: [],
