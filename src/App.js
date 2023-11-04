@@ -1,17 +1,22 @@
 import Navbar from "./components/navbar/Navbar";
 import Carousel from "./components/main/Carousel";
+import Opinion from "./components/Opinion";
+import Layer1 from "./components/main/Layer1";
+import VerticalLine from "./components/VerticalLine";
 
 function App() {
   return (
-    <div className="flex justify-center w-full border-2 border-blue-500">
-      <div className="max-w-screen-2xl w-full">
+    <div className="flex justify-center w-full font-serif">
+      <div className="max-w-screen-myxl">
         <Navbar />
-        <div className="w-fit ml-[60px] my-[32px] text-[20px] font-bold text-blue-700">
-        OPINION
-        </div>
+        <Opinion />
         <Carousel />
+        <div className="mx-[60px]">
+          <VerticalLine/>
+          <Layer1 />
         </div>
-    </div> 
+      </div>
+    </div>
   );
 }
 
