@@ -1,29 +1,11 @@
-import React, { useState, useEffect } from "react";
-
 export default function Carousel() {
   const backgroundImageUrl = "/images/background/bg.jpg";
 
-  const [showData, setShowData] = useState(true);
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 576) {
-        setShowData(false);
-      } else {
-        setShowData(true);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
-    <div>
       <div className="flex justify-center">
-        {showData ? (
           <div>
             <div
-              className="flex mymd:h-[400px] max-w-screen-myxl w-screen mysm:h-[320px] bg-center bg-cover bg-no-repeat relative  min-w-[320px]"
+              className=" mymd:h-[400px] max-w-screen-myxl w-screen mysm:h-[320px] mysm:flex hidden bg-center bg-cover bg-no-repeat relative  min-w-[320px]"
               style={{ backgroundImage: `url(${backgroundImageUrl})` }}
             >
               <div className="bg-blue-500 hidden mysm:flex w-[64px] h-[64px] absolute top-1/2 transform -translate-y-1/2 left-[26px] mytablet:left-[36px] mylg:left-[60px]"></div>
@@ -41,8 +23,7 @@ export default function Carousel() {
               </div>
             </div>
           </div>
-        ) : (
-          <div>
+          <div className="mysm:hidden flex flex-col">
             <img src={backgroundImageUrl} alt="bg" />
             <div className="bg-black text-white p-6">
               <h1 className="leading-[28px] text-[20px] pb-5">
@@ -57,8 +38,6 @@ export default function Carousel() {
               </div>
             </div>
           </div>
-        )}
-      </div>
     </div>
   );
 }
