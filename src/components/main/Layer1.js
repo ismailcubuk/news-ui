@@ -12,7 +12,7 @@ export default function Layer1() {
         <div className="mytablet:w-2/4">
         <LeftSection />
         </div>
-        <div className="flex flex-col border-2 mytablet:w-2/4 border-red-500 mysm:flex-row">
+        <div className="flex flex-col mytablet:w-2/4  mysm:flex-row">
           <MiddleSection />
           <PopularSection />
         </div>

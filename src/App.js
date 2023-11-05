@@ -13,11 +13,13 @@ function App() {
         {/* <Navbar /> */}
         {/* <Opinion /> */}
         <div className="flex flex-col-reverse myxl:flex-col">
-        {/* <Carousel /> */}
-        <Layer1 />
+          {/* <Carousel /> */}
+          {/* <Layer1 /> */}
+        </div>
+        <div>
+        <Layer2 />
         </div>
         {/* <DividerW /> */}
-        {/* <Layer2 /> */}
         {/* <Footer /> */}
       </div>
     </div>

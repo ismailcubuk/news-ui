@@ -1,5 +1,5 @@
-import React from "react";
 import { DividerW, DividerH } from '../Divider';
+import React, { useEffect, useState } from "react";
 
 const articles = [
   {
@@ -45,36 +45,53 @@ const articles = [
 ];
 
 export default function Layer2() {
+  const [hoursSm, setHoursSm] = useState(window.innerWidth < 576);
+  const [hoursMd, setHoursMd] = useState(window.innerWidth >= 576);
+  const [editorsSm, setEditorsSm] = useState(window.innerWidth < 576);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHoursSm(window.innerWidth < 576);
+      setHoursMd(window.innerWidth >= 576);
+      setEditorsSm(window.innerWidth > 768)
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
-    <div className="flex mx-[60px]">
+    <div className="flex mx-8">
       <div className="flex flex-col items-start">
         {articles.map((article, index) => (
           <div key={index}>
-            <div className={`flex gap-6 items-center ${index === 2 ? 'row-span-2 flex-col' : ''}`}>
-            <img src={article.imgSrc} className={`w-[424px] h-[240px] ${index === 2 ? 'w-[984px] h-[400px]' : ''}`} alt={`thumb${index + 5}`} />
-            <div className={`flex flex-col items-start gap-3  ${index === 2 ? 'w-full' : ''}`}>
-              <p className="hours">{article.hoursAgo}</p>
-              <p className="bottom-header w-[536px]">{article.bottomHeader}</p>
-              <p className={`description ${index === 2 ? 'w-[984px]' : 'w-[536px]'}`}>{article.description}</p>
-              <div className="flex items-center gap-4">
-                <img src={article.authorImg} alt={`${article.author.split(' ')[0].toLowerCase()}pp`} />
-                <p className="author">{article.author}</p>
-              </div>
+            <div className={`flex flex-col mysm:flex-row gap-6 ${index === 2 ? 'row-span-2 flex-col' : ''}`}>
+            <div className="flex flex-row items-center">
+              <img src={article.imgSrc} alt={`thumb${index + 5}`}  className="w-20 h-11 mysm:h-fit mysm:w-fit"/>
+              {hoursSm ? <p className="hours ml-3">{article.hoursAgo}</p> : null}
+            </div>
+            <div className="flex flex-col gap-2 mysm:gap-3 ">
+            {hoursMd ? <p className="hours">{article.hoursAgo}</p> : null}
+              <p className="text-[16px] leading-[24px] mysm:text-[20px] mysm:leading-[28px] mymd:text-[24px] mymd:leading-[32px] font-bold ">{article.bottomHeader}</p>
+              <p className="text-[14px] leading-[20px] mymd:text-[16px] mymd:leading-[24px]">{article.description}</p>
             </div>
           </div>
           {index < articles.length - 1 && <DividerW />}
           </div>
         ))}
       </div>
-      <DividerH/>
+      {editorsSm? <DividerH/>:null}
+     {editorsSm ?
       <div className="flex flex-col gap-3">
         <p className="editors-pick">Edıtor’s Pıck</p>
-        <img src="/images/thumbs/thumb10.jpg" className="w-[288px] h-[162px]" alt="thumb10" />
+        <img src="/images/thumbs/thumb10.jpg" alt="thumb10" />
         <p className="header">What lies beneath the stigmatisation of redheads in the UK?</p>
         <p className="custom-text">Given the suicides of bullied redhead children, there have been calls from rights groups to identify verbal abuse of red hair as a hate crime.</p>
         <p className="author">Nafees Mahmud</p>
       </div>
-
+     :null}
     </div>
   );
 }

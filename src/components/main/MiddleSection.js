@@ -20,7 +20,7 @@ const articles = [
 ];
 
 export default function MiddleSection() {
-  const isMysm = window.innerWidth > 320 || window.innerWidth > 768;
+  const isMysm = window.innerWidth < 320 || window.innerWidth > 576;
   return (
     <div className="flex flex-col myxs:flex-row mysm:flex-col myxs:w-full  mytablet:flex-col items-start ">
       {articles.map((article, index) => (
