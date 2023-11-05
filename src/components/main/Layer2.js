@@ -1,4 +1,5 @@
 import React from "react";
+import { DividerW, DividerH } from '../Divider';
 
 const articles = [
   {
@@ -45,30 +46,35 @@ const articles = [
 
 export default function Layer2() {
   return (
-    <div className="grid pt-6 grid-cols-4 gap-12 divide-x-2">
-      <div className="grid grid-rows-6 col-span-3 gap-6 divide-y-2">
+    <div className="flex">
+      <div className="flex flex-col items-start">
         {articles.map((article, index) => (
-          <div className={`flex ${index === 2 ? 'row-span-2 flex-col' : ''}`} key={index}>
-            <img src={article.imgSrc} className={`w-[424px] h-[240px] mr-6 ${index === 2 ? 'w-[984px] h-[400px]' : ''}`} alt={`thumb${index + 5}`} />
-            <div className="py-4">
-              <p className="hours pb-3">{article.hoursAgo}</p>
-              <p className="bottom-header pb-3">{article.bottomHeader}</p>
-              <p className="description pb-3">{article.description}</p>
+          <div key={index}>
+            <div className={`flex gap-6 items-center ${index === 2 ? 'row-span-2 flex-col' : ''}`}>
+            <img src={article.imgSrc} className={`w-[424px] h-[240px] ${index === 2 ? 'w-[984px] h-[400px]' : ''}`} alt={`thumb${index + 5}`} />
+            <div className={`flex flex-col items-start gap-3  ${index === 2 ? 'w-full' : ''}`}>
+              <p className="hours">{article.hoursAgo}</p>
+              <p className="bottom-header w-[536px]">{article.bottomHeader}</p>
+              <p className={`description ${index === 2 ? 'w-[984px]' : 'w-[536px]'}`}>{article.description}</p>
               <div className="flex items-center gap-4">
                 <img src={article.authorImg} alt={`${article.author.split(' ')[0].toLowerCase()}pp`} />
                 <p className="author">{article.author}</p>
               </div>
             </div>
           </div>
+          {index < articles.length - 1 && <DividerW />}
+          </div>
         ))}
       </div>
-      <div className="col-span-1 flex flex-col gap-3">
+      <DividerH/>
+      <div className="flex flex-col gap-3">
         <p className="editors-pick">Edıtor’s Pıck</p>
         <img src="/images/thumb10.jpg" className="w-[288px] h-[162px]" alt="thumb10" />
         <p className="header">What lies beneath the stigmatisation of redheads in the UK?</p>
         <p className="custom-text">Given the suicides of bullied redhead children, there have been calls from rights groups to identify verbal abuse of red hair as a hate crime.</p>
         <p className="author">Nafees Mahmud</p>
       </div>
+
     </div>
   );
 }
