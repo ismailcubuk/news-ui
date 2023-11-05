@@ -4,26 +4,12 @@ export default function Carousel() {
   const backgroundImageUrl = "/images/background/bg.jpg";
 
   const [showData, setShowData] = useState(true);
-  const [showDivider, setShowDivider] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 576) {
         setShowData(false);
       } else {
         setShowData(true);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1440) {
-        setShowDivider(false);
-      } else {
-        setShowDivider(true);
       }
     };
     window.addEventListener("resize", handleResize);

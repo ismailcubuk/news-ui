@@ -3,7 +3,6 @@ import Carousel from "./components/main/Carousel";
 import Opinion from "./components/Opinion";
 import Layer1 from "./components/main/Layer1";
 import Layer2 from "./components/main/Layer2";
-import { DividerW } from "./components/Divider";
 import Footer from "./components/main/Footer";
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           </div>
           <Layer2 />
         </div>
-        <DividerW />
         <Footer />
       </div>
     </div>

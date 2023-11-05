@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { DividerW, DividerH } from "../Divider";
+
 const articles = [
   {
     imgSrc: "/images/thumbs/thumb3.jpg",
@@ -20,15 +21,28 @@ const articles = [
 ];
 
 export default function MiddleSection() {
-  const isMysm = window.innerWidth < 320 || window.innerWidth > 576;
+  const [isMysm, setIsMysm] = useState(window.innerWidth < 320 || window.innerWidth > 576);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMysm(window.innerWidth < 320 || window.innerWidth > 576);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col myxs:flex-row mysm:flex-col myxs:w-full mytablet:flex-col items-start">
       {articles.map((article, index) => (
         <div
-          className="flex flex-col justify-center items-start gap-3 w-1/2 mysm:w-full"
+          className="flex flex-col justify-center items-start gap-3 w-full myxs:w-1/2 mysm:w-full"
           key={index}
         >
-          <img src={article.imgSrc} alt={`thumb${index}`} className="w-full "/>
+          <img src={article.imgSrc} alt={`thumb${index}`} className="w-full" />
           <p className="header">{article.header}</p>
           <p className="custom-text">{article.customText}</p>
           <div className="flex items-center gap-4">

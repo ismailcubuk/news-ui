@@ -5,28 +5,13 @@ import LeftSection from "./LeftSection";
 
 export default function Layer1() {
   const [showComponent, setShowComponent] = useState(true);
-  const [diver2, setDiver2] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 576) {
+      if (window.innerWidth <= 576) {
         setShowComponent(false);
       } else {
         setShowComponent(true);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setDiver2(false);
-      } else {
-        setDiver2(true);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -43,22 +28,22 @@ export default function Layer1() {
         <div className="mytablet:w-2/4">
           <LeftSection />
         </div>
-        {diver2 ? (
-          <div className="flex h-[700px] w-12 flex-row justify-center items-center">
+          <div className=" h-[700px] hidden mytablet:flex w-12 flex-row justify-center items-center">
             <div className="h-full border-2" />
           </div>
-        ) : (
-          <div className="flex w-full h-12 flex-row justify-center items-center">
+          <div className="flex w-full h-12 mytablet:hidden flex-row justify-center items-center">
             <div className="w-full border-2" />
           </div>
-        )}
         <div className="flex flex-col mytablet:w-2/4 px-8 mytablet:px-0 mysm:flex-row">
           <MiddleSection />
           {showComponent ? (
             <div className="flex min-h-full w-12 flex-row justify-center items-center">
               <div className="h-full border-2" />
             </div>
-          ) : null}
+          ) : 
+          <div className="flex w-full h-12 flex-col justify-center items-center">
+          <div className="w-full border-2" />
+        </div>}
           <PopularSection />
         </div>
       </div>
