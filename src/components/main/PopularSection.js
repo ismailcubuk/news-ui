@@ -31,7 +31,7 @@ export default function PopularSection() {
   ];
 
   return (
-    <div className="flex flex-col items-start gap-6">
+    <div className="flex flex-col items-start gap-6 w-full border-2">
       <div className="popular pb-6">POPULAR</div>
       <div className="flex flex-col items-start">
         {items.map((item, index) => (
@@ -39,7 +39,7 @@ export default function PopularSection() {
             <div className="flex justify-center items-center gap-4">
               <p className="number">{item.number}</p>
               <div className="flex flex-col items-start gap-2">
-                <p className="description">{item.text}</p>
+                <p className="text-[16px] leading-[24px] mytablet:text-[14px] mytablet:leading-[20px] mylg:text-[16px] mylg:leading-[24px]">{item.text}</p>
                 <p className="author">{item.author}</p>
               </div>
             </div>

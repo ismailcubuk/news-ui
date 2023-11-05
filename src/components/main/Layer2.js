@@ -46,7 +46,7 @@ const articles = [
 
 export default function Layer2() {
   return (
-    <div className="flex">
+    <div className="flex mx-[60px]">
       <div className="flex flex-col items-start">
         {articles.map((article, index) => (
           <div key={index}>

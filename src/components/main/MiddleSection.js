@@ -1,5 +1,5 @@
 import React from "react";
-import { DividerW, DividerH } from '../Divider';
+import { DividerW, DividerH } from "../Divider";
 const articles = [
   {
     imgSrc: "/images/thumbs/thumb3.jpg",
@@ -20,18 +20,22 @@ const articles = [
 ];
 
 export default function MiddleSection() {
+  const isMysm = window.innerWidth > 320 || window.innerWidth > 768;
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col myxs:flex-row mysm:flex-col myxs:w-full  mytablet:flex-col items-start ">
       {articles.map((article, index) => (
-        <div className="flex flex-col justify-center items-start gap-3 w-[288px]" key={index}>
-          <img src={article.imgSrc} alt={`thumb${index}`} />
-            <p className="header">{article.header}</p>
-            <p className="custom-text">{article.customText}</p>
-            <div className="flex items-center gap-4">
-              {article.authorImg && <img src={article.authorImg} alt="author" />}
-              <p className="author">{article.author}</p>
-            </div>
-            {index < articles.length - 1 && <DividerW />}
+        <div
+          className="flex flex-col justify-center items-start gap-3 "
+          key={index}
+        >
+          <img src={article.imgSrc} alt={`thumb${index}`} className="w-full"/>
+          <p className="header">{article.header}</p>
+          <p className="custom-text">{article.customText}</p>
+          <div className="flex items-center gap-4">
+            {article.authorImg && <img src={article.authorImg} alt="author" />}
+            <p className="author">{article.author}</p>
+          </div>
+          {index < articles.length - 1 && isMysm ? <DividerW /> : null}
         </div>
       ))}
     </div>

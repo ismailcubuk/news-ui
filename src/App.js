@@ -10,18 +10,15 @@ function App() {
   return (
     <div className="flex justify-center w-full nato-serif">
       <div className="max-w-screen-myxl">
-        <Navbar />
-        <Opinion />
-        <Carousel />
-        <div className="mx-[60px]">
-          <DividerW />
+        {/* <Navbar /> */}
+        {/* <Opinion /> */}
+        <div className="flex flex-col-reverse myxl:flex-col">
+        {/* <Carousel /> */}
+        <Layer1 />
         </div>
-        <div className="mx-[60px]">
-          <Layer1 />
-          <DividerW />
-          <Layer2 />
-        </div>
-        <Footer/>
+        {/* <DividerW /> */}
+        {/* <Layer2 /> */}
+        {/* <Footer /> */}
       </div>
     </div>
   );
