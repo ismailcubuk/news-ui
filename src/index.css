@@ -27,7 +27,7 @@
       line-height: 51.36px;
       color: #BFC3C9;
     }
-    .popular-text {
+    .description {
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
@@ -36,5 +36,18 @@
       font-weight: 700; 
       font-size: 12px;
       letter-spacing: 0.025em;
+    }
+    .hours{
+      color: var(--ink-10, #A0A5AA);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .bottom-header{
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
     }
   }

@@ -39,7 +39,7 @@ export default function PopularSection() {
         <div className="flex gap-2 items-center" key={index}>
           <p className="number">{item.number}</p>
           <div>
-            <p className="popular-text">{item.text}</p>
+            <p className="description">{item.text}</p>
             <p className="author">{item.author}</p>
           </div>
         </div>

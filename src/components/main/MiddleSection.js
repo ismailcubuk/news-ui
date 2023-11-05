@@ -23,7 +23,7 @@ export default function MiddleSection() {
   return (
     <div className="grid grid-rows-2 divide-y-2 mx-6">
       {articles.map((article, index) => (
-        <div className="grid grid-rows-2 py-2" key={index}>
+        <div className="grid grid-rows-2" key={index}>
           <img src={article.imgSrc} alt={`thumb${index}`} />
           <div className="grid gap-3">
             <p className="header">{article.header}</p>
