@@ -12,7 +12,6 @@ function App() {
         <Opinion />
         <Carousel />
         <div className="mx-[60px]">
-          <VerticalLine/>
           <Layer1 />
         </div>
       </div>

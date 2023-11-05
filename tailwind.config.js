@@ -23,6 +23,9 @@ module.exports = {
       fontFamily: {
         'serif': ['Noto Serif', 'serif'],
       },
+      letterSpacing: {
+        '1': '1px',
+      },
     },
   },
   plugins: [],

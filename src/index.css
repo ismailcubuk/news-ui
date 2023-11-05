@@ -11,4 +11,30 @@
   .nato-serif{
     font-family: 'NotoSerif-VariableFont_wdth';
   }
-  
+  @layer components {
+    .header {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .custom-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .number {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 51.36px;
+      color: #BFC3C9;
+    }
+    .popular-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .author {
+      font-weight: 700; 
+      font-size: 12px;
+      letter-spacing: 0.025em;
+    }
+  }
