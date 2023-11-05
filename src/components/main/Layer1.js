@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import PopularSection from "./PopularSection";
 import MiddleSection from "./MiddleSection";
 import LeftSection from "./LeftSection";
-import { DividerW, DividerH } from "../Divider";
 
 export default function Layer1() {
   const [showComponent, setShowComponent] = useState(true);

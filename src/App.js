@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="flex justify-center w-full nato-serif">
       <div className="max-w-screen-myxl">
-        {/* <Navbar /> */}
+        <Navbar />
         <Opinion />
         <div className="flex flex-col-reverse myxl:flex-col">
           <Carousel />
