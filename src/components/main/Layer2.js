@@ -47,7 +47,7 @@ const articles = [
 export default function Layer2() {
   const [hoursSm, setHoursSm] = useState(window.innerWidth < 576);
   const [hoursMd, setHoursMd] = useState(window.innerWidth >= 576);
-  const [editorsSm, setEditorsSm] = useState(window.innerWidth < 576);
+  const [editorsSm, setEditorsSm] = useState(window.innerWidth > 576);
 
   useEffect(() => {
     const handleResize = () => {

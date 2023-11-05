@@ -17,10 +17,13 @@ function App() {
           <Layer1 />
         </div>
         <div>
-        <Layer2 />
+          <div className="flex w-full h-12 flex-row justify-center items-center">
+            <div className="w-full border-2" />
+          </div>
+          <Layer2 />
         </div>
-        {/* <DividerW /> */}
-        {/* <Footer /> */}
+        <DividerW />
+        <Footer />
       </div>
     </div>
   );

@@ -31,8 +31,8 @@ export default function PopularSection() {
   ];
 
   return (
-    <div className="flex flex-col items-start gap-6 w-full border-2">
-      <div className="popular pb-6">POPULAR</div>
+    <div className="flex flex-col items-start gap-6 w-full">
+      <div className="popular">POPULAR</div>
       <div className="flex flex-col items-start">
         {items.map((item, index) => (
           <div key={index}>
