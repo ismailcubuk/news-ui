@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Carousel() {
-  const backgroundImageUrl = "/images/bg.jpg";
+  const backgroundImageUrl = "/images/background/bg.jpg";
 
   return (
     <div className="flex justify-center">
@@ -15,7 +15,7 @@ export default function Carousel() {
               This is how a Trump constitutional coup would unfold
             </h1>
             <div className="flex items-center gap-4">
-              <img src="/images/pp.png" alt="Profil Resmi" />
+              <img src="/images/profilePictures/alfonspp.png" alt="alfonspp" />
               <p className="text-[12px]">ALFONS LOPEZ TENA</p>
             </div>
         </div>

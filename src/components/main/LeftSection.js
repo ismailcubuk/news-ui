@@ -3,7 +3,7 @@ import React from 'react'
 export default function LeftSection() {
   return (
     <div className="flex flex-col gap-6 shrink-0 w-[648px]">
-        <img src="/images/thumb1.jpg" alt="Profil Resmi"/>
+        <img src="/images/thumbs/thumb1.jpg" alt="thumb1"/>
           <p className="text-[42px] font-bold leading-[52px] capitalize">
             Celebrate Kamala Harris, But Don’t Stop Applying Pressure To The
             System
@@ -15,7 +15,7 @@ export default function LeftSection() {
             change.
           </p>
           <div className="flex items-center gap-4">
-            <img src="/images/sharanpp.png" alt="sharanpp Profil Resmi" />
+            <img src="/images/profilePictures/sharanpp.png" alt="sharanpp" />
             <p>Sharan Dhaliwal</p>
         </div>
       </div>

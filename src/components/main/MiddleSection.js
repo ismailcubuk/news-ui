@@ -2,15 +2,15 @@ import React from "react";
 import { DividerW, DividerH } from '../Divider';
 const articles = [
   {
-    imgSrc: "/images/thumb3.jpg",
+    imgSrc: "/images/thumbs/thumb3.jpg",
     header: "Ethiopia's needless war",
     customText:
       "The war in Ethiopia can still be stopped before it gets out of control and potentially draws in Eritrea.",
     author: "ABDI ISMAIL SAMATAR",
-    authorImg: "/images/abdipp.png",
+    authorImg: "/images/profilePictures/abdipp.png",
   },
   {
-    imgSrc: "/images/thumb4.jpeg",
+    imgSrc: "/images/thumbs/thumb4.jpg",
     header: "The Muslim surveillance-industrial complex",
     customText:
       "The Muslim Pro and Muslim Mingle data harvesting revelations are consistent with the realities of American Muslim surveillance since 9/11.",

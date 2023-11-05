@@ -4,6 +4,7 @@ import Opinion from "./components/Opinion";
 import Layer1 from "./components/main/Layer1";
 import Layer2 from "./components/main/Layer2";
 import { DividerW } from "./components/Divider";
+import Footer from "./components/main/Footer";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <DividerW />
           <Layer2 />
         </div>
-        <div className="bg-footer h-20 w-full" />
+        <Footer/>
       </div>
     </div>
   );
