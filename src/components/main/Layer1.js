@@ -6,13 +6,13 @@ import { DividerW, DividerH } from "../Divider";
 
 export default function Layer1() {
   return (
-    <div className="flex flex-col-reverse myxl:flex-col mx-8 ">
+    <div className="flex flex-col-reverse myxl:flex-col mytablet:mx-8 ">
       <DividerW />
       <div className="flex items-start flex-col mytablet:flex-row ">
         <div className="mytablet:w-2/4">
         <LeftSection />
         </div>
-        <div className="flex flex-col mytablet:w-2/4  mysm:flex-row">
+        <div className="flex flex-col mytablet:w-2/4 px-8 mytablet:px-0 mysm:flex-row">
           <MiddleSection />
           <PopularSection />
         </div>

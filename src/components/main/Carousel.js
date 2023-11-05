@@ -6,7 +6,7 @@ export default function Carousel() {
   return (
     <div className="flex justify-center">
       <div
-        className="flex h-400 w-[1440px] bg-no-repeat relative"
+        className="flex mymd:h-[400px]  w-full bg-no-repeat relative"
         style={{ backgroundImage: `url(${backgroundImageUrl})` }}
       >
         <div className="bg-blue-500 w-[64px] h-[64px] absolute top-[164px] left-[60px]"></div>
