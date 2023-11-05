@@ -2,8 +2,6 @@ import Navbar from "./components/navbar/Navbar";
 import Carousel from "./components/main/Carousel";
 import Opinion from "./components/Opinion";
 import Layer1 from "./components/main/Layer1";
-import VerticalLine from "./components/VerticalLine";
-
 function App() {
   return (
     <div className="flex justify-center w-full nato-serif">
