@@ -1,4 +1,5 @@
 import React from "react";
+import { DividerW, DividerH } from "../Divider";
 
 export default function PopularSection() {
   const items = [
@@ -30,21 +31,22 @@ export default function PopularSection() {
   ];
 
   return (
-    <div className="flex relative px-6">
-        <div className="absolute top-0 left-6">
-            POPULAR
-        </div>
-        <div className="grid grid-rows-5 divide-y-2 pt-8 ">
-      {items.map((item, index) => (
-        <div className="flex gap-2 items-center" key={index}>
-          <p className="number">{item.number}</p>
-          <div>
-            <p className="description">{item.text}</p>
-            <p className="author">{item.author}</p>
+    <div className="flex flex-col items-start gap-6">
+      <div className="popular pb-6">POPULAR</div>
+      <div className="flex flex-col items-start">
+        {items.map((item, index) => (
+          <div key={index}>
+            <div className="flex justify-center items-center gap-4">
+              <p className="number">{item.number}</p>
+              <div className="flex flex-col items-start gap-2">
+                <p className="description">{item.text}</p>
+                <p className="author">{item.author}</p>
+              </div>
+            </div>
+            {index < items.length - 1 && <DividerW />}
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </div>
   );
 }

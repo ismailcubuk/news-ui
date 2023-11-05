@@ -2,10 +2,9 @@ import React from 'react'
 
 export default function LeftSection() {
   return (
-    <div className="grid grid-rows-2 col-span-1 w-[648px]">
-        <img src="/images/thumb1.jpg" alt="Profil Resmi" />
-        <div className="grid">
-          <p className="text-[42px] font-bold leading-[52px]">
+    <div className="flex flex-col gap-6 shrink-0 w-[648px]">
+        <img src="/images/thumb1.jpg" alt="Profil Resmi"/>
+          <p className="text-[42px] font-bold leading-[52px] capitalize">
             Celebrate Kamala Harris, But Don’t Stop Applying Pressure To The
             System
           </p>
@@ -18,7 +17,6 @@ export default function LeftSection() {
           <div className="flex items-center gap-4">
             <img src="/images/sharanpp.png" alt="sharanpp Profil Resmi" />
             <p>Sharan Dhaliwal</p>
-          </div>
         </div>
       </div>
   )

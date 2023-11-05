@@ -1,5 +1,5 @@
 import React from "react";
-
+import { DividerW, DividerH } from '../Divider';
 const articles = [
   {
     imgSrc: "/images/thumb3.jpg",
@@ -21,18 +21,17 @@ const articles = [
 
 export default function MiddleSection() {
   return (
-    <div className="grid grid-rows-2 divide-y-2 mx-6">
+    <div className="flex flex-col items-center">
       {articles.map((article, index) => (
-        <div className="grid grid-rows-2" key={index}>
+        <div className="flex flex-col justify-center items-start gap-3 w-[288px]" key={index}>
           <img src={article.imgSrc} alt={`thumb${index}`} />
-          <div className="grid gap-3">
             <p className="header">{article.header}</p>
             <p className="custom-text">{article.customText}</p>
             <div className="flex items-center gap-4">
               {article.authorImg && <img src={article.authorImg} alt="author" />}
               <p className="author">{article.author}</p>
             </div>
-          </div>
+            {index < articles.length - 1 && <DividerW />}
         </div>
       ))}
     </div>

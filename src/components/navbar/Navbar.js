@@ -1,14 +1,11 @@
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
-
+import MySVGComponent from "../../svg/Logo";
 export default function Navbar() {
   return (
     <nav className="flex bg-blue-700 items-center h-12 px-5 justify-between">
-      <div>
-        <span className=" text-white">TRT</span>
-        <span className=" text-world">WORLD</span>
-      </div>
+        <MySVGComponent />
       <div className="flex">
         <div className="w-[436px] flex gap-4 text-white mr-4 my-2">
           <button className="flex items-center">
