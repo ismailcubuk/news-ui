@@ -45,7 +45,7 @@ const articles = [
 
 export default function Layer2() {
   return (
-    <div className="grid pt-6 grid-cols-4">
+    <div className="grid pt-6 grid-cols-4 gap-12 divide-x-2">
       <div className="grid grid-rows-6 col-span-3 gap-6 divide-y-2">
         {articles.map((article, index) => (
           <div className={`flex ${index === 2 ? 'row-span-2 flex-col' : ''}`} key={index}>
@@ -61,6 +61,13 @@ export default function Layer2() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="col-span-1 flex flex-col gap-3">
+        <p className="editors-pick">Edıtor’s Pıck</p>
+        <img src="/images/thumb10.jpg" className="w-[288px] h-[162px]" alt="thumb10" />
+        <p className="header">What lies beneath the stigmatisation of redheads in the UK?</p>
+        <p className="custom-text">Given the suicides of bullied redhead children, there have been calls from rights groups to identify verbal abuse of red hair as a hate crime.</p>
+        <p className="author">Nafees Mahmud</p>
       </div>
     </div>
   );

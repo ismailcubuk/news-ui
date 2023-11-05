@@ -12,8 +12,9 @@ function App() {
         <Carousel />
         <div className="mx-[60px] divide-y-2">
           <Layer1 />
-          <Layer2/>
+          <Layer2 />
         </div>
+        <div className="bg-footer h-20 w-full" />
       </div>
     </div>
   );

@@ -20,6 +20,7 @@
     .custom-text {
       font-size: 14px;
       line-height: 20px;
+      font-weight: 400;
     }
     .number {
       font-weight: 700;
@@ -35,7 +36,7 @@
     .author {
       font-weight: 700; 
       font-size: 12px;
-      letter-spacing: 0.025em;
+      letter-spacing: 1px;
     }
     .hours{
       color: var(--ink-10, #A0A5AA);
@@ -49,5 +50,12 @@
       font-size: 24px;
       font-weight: 700;
       line-height: 32px;
+    }
+    .editors-pick{
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
   }

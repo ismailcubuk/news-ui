@@ -8,6 +8,7 @@ module.exports = {
         world: "#33D8FF",
         opinion: "#005D99",
         horizon: "#E1E6EB",
+        footer: "#001733"
       },
       height: {
         400: "25rem",
