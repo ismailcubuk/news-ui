@@ -14,6 +14,7 @@ export default function Layer1() {
         <div className="flex flex-col mytablet:w-2/4 px-8 mytablet:px-0 mysm:flex-row">
           <MiddleSection />
           <Divider h7tbl h />
+          <Divider popular w />
           <PopularSection />
         </div>
       </div>

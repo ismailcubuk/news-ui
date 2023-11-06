@@ -1,5 +1,6 @@
 import sharanpp from '../../images/profilePictures/sharanpp.png';
 import thumb1 from '../../images/thumbs/thumb1.jpg';
+import Divider from '../Dividers';
 
 export default function LeftSection() {
   return (
@@ -19,6 +20,7 @@ export default function LeftSection() {
             <img src={sharanpp} alt="sharanpp" />
             <p>Sharan Dhaliwal</p>
         </div>
+        <Divider firstSection w />
       </div>
   )
 }
