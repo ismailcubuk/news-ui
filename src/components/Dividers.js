@@ -13,7 +13,7 @@ const Divider = ({ h7, h, w, h7tbl, dividerW, dividerH, dividerSection }) => {
 
   return (
     <div className={`${DividerClass} justify-center items-center `}>
-      <div className={`border-2 border-red-500 ${dividerInside}`} />
+      <div className={`border-2 ${dividerInside}`} />
     </div>
   );
 };
