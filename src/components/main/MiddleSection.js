@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Divider from "../Dividers";
+import abdipp from '../../images/profilePictures/abdipp.png';
+import thumb3 from '../../images/thumbs/thumb3.jpg';
+import thumb4 from '../../images/thumbs/thumb4.jpg';
 
 const articles = [
   {
-    imgSrc: "/images/thumbs/thumb3.jpg",
+    imgSrc: thumb3,
     header: "Ethiopia's needless war",
     customText:
       "The war in Ethiopia can still be stopped before it gets out of control and potentially draws in Eritrea.",
     author: "ABDI ISMAIL SAMATAR",
-    authorImg: "/images/profilePictures/abdipp.png",
+    authorImg: abdipp,
   },
   {
-    imgSrc: "/images/thumbs/thumb4.jpg",
+    imgSrc: thumb4,
     header: "The Muslim surveillance-industrial complex",
     customText:
       "The Muslim Pro and Muslim Mingle data harvesting revelations are consistent with the realities of American Muslim surveillance since 9/11.",

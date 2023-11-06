@@ -1,46 +1,57 @@
 import React, { useEffect, useState } from "react";
 import Divider from '../Dividers';
+import faysalpp from '../../images/profilePictures/faysalpp.png';
+import tompp from '../../images/profilePictures/tompp.png';
+import alipp from '../../images/profilePictures/alipp.png';
+import cjpp from '../../images/profilePictures/cjpp.png';
+import arifpp from '../../images/profilePictures/arifpp.png';
+import thumb5 from '../../images/thumbs/thumb5.jpg';
+import thumb6 from '../../images/thumbs/thumb6.jpg';
+import thumb7 from '../../images/thumbs/thumb7.jpg';
+import thumb8 from '../../images/thumbs/thumb8.jpg';
+import thumb9 from '../../images/thumbs/thumb9.jpg';
+import thumb10 from '../../images/thumbs/thumb10.jpg';
 
 const articles = [
   {
-    imgSrc: "/images/thumbs/thumb5.jpg",
+    imgSrc: thumb5,
     hoursAgo: "20 hours ago",
     bottomHeader: "How Hafez al Assad hijacked the Baath Party – and the state – 50 years ago",
     description: "Hafez al Assad’s ominous capture of power on 13 November 1970, as chronicled by a former student activist and left-wing Baathist from the Alawi heartland.",
     author: "FAYSAL MOHAMAD",
-    authorImg: "/images/profilePictures/faysalpp.png",
+    authorImg: faysalpp,
   },
   {
-    imgSrc: "/images/thumbs/thumb6.jpg",
+    imgSrc: thumb6,
     hoursAgo: "21 hours ago",
     bottomHeader: "Who was the real target of Pakistan's dossier on Indian terror sponsorship?",
     description: "Last week, decision-makers decided it was time to raise the stakes in the India-Pakistan rivalry.",
     author: "TOM HUSSAIN",
-    authorImg: "/images/profilePictures/tompp.png",
+    authorImg: tompp,
   },
   {
-    imgSrc: "/images/thumbs/thumb7.jpg",
+    imgSrc: thumb7,
     hoursAgo: "21 hours ago",
     bottomHeader: "US President-elect Biden's priority is not Turkey",
     description: "Joe Biden will first have to deal with controlling a spiralling pandemic and recovering the economy.",
     author: "ALİ ÇINAR",
-    authorImg: "/images/profilePictures/alipp.png",
+    authorImg: alipp,
   },
   {
-    imgSrc: "/images/thumbs/thumb8.jpg",
+    imgSrc: thumb8,
     hoursAgo: "2 DAYS AGO",
     bottomHeader: "Pakistani dossier on Indian terror sponsorship has big implications",
     description: "The evidence presented by Pakistan should be examined seriously by the international community.",
     author: "CJ WERLEMAN",
-    authorImg: "/images/profilePictures/cjpp.png",
+    authorImg: cjpp,
   },
   {
-    imgSrc: "/images/thumbs/thumb9.jpg",
+    imgSrc: thumb9,
     hoursAgo: "5 DAYS AGO",
     bottomHeader: "A Biden administration will contend with a vastly changed South Asia",
     description: "The US will need to focus on bilateral relationships in the Indian Subcontinent rather than relying on India as its guide.",
     author: "ARİF RAFİQ",
-    authorImg: "/images/profilePictures/arifpp.png",
+    authorImg: arifpp,
   },
 ];
 
@@ -76,6 +87,10 @@ export default function Layer2() {
             {hoursMd ? <p className="hours">{article.hoursAgo}</p> : null}
               <p className="text-[16px] leading-[24px] mysm:text-[20px] mysm:leading-[28px] mymd:text-[24px] mymd:leading-[32px] font-bold ">{article.bottomHeader}</p>
               <p className="text-[14px] leading-[20px] mymd:text-[16px] mymd:leading-[24px]">{article.description}</p>
+              <div className="flex items-center gap-3">
+              <img src={article.authorImg} width={32} height={32}/>
+              <p className="author">{article.author}</p>
+              </div>
             </div>
           </div>
           {index < articles.length - 1 && <Divider dividerW w/>}
@@ -86,7 +101,7 @@ export default function Layer2() {
      {editorsSm ?
       <div className="flex flex-col gap-3">
         <p className="editors-pick">Edıtor’s Pıck</p>
-        <img src="/images/thumbs/thumb10.jpg" alt="thumb10" />
+        <img src={thumb10} alt="thumb10" />
         <p className="header">What lies beneath the stigmatisation of redheads in the UK?</p>
         <p className="custom-text">Given the suicides of bullied redhead children, there have been calls from rights groups to identify verbal abuse of red hair as a hate crime.</p>
         <p className="author">Nafees Mahmud</p>
