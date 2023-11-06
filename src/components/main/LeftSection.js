@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function LeftSection() {
   return (
-    <div className="flex flex-col gap-6 shrink-0 w-full">
+    <div className="mytablet:w-2/4 flex flex-col gap-6 shrink-0 w-full">
         <img src="/images/thumbs/thumb1.jpg" alt="thumb1"/>
           <p className="px-8 mytablet:px-0 mymd:text-[42px] mymd:leading-[52px] mytablet:text-[36px] mytablet:leading-[44px] text-[28px] leading-[36px] font-bold">
             Celebrate Kamala Harris, But Don’t Stop Applying Pressure To The

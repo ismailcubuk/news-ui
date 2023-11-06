@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { DividerW, DividerH } from "../Divider";
+import Divider from "../Dividers";
 
 const articles = [
   {
@@ -49,7 +49,7 @@ export default function MiddleSection() {
             {article.authorImg && <img src={article.authorImg} alt="author" />}
             <p className="author">{article.author}</p>
           </div>
-          {index < articles.length - 1 && isMysm ? <DividerW /> : null}
+          {index < articles.length - 1 && isMysm ? <Divider dividerW w/> : null}
         </div>
       ))}
     </div>

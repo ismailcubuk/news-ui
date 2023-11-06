@@ -1,5 +1,5 @@
 import React from "react";
-import { DividerW, DividerH } from "../Divider";
+import Divider from "../Dividers";
 
 export default function PopularSection() {
   const items = [
@@ -43,7 +43,7 @@ export default function PopularSection() {
                 <p className="author">{item.author}</p>
               </div>
             </div>
-            {index < items.length - 1 && <DividerW />}
+            {index < items.length - 1 && <Divider dividerW w/>}
           </div>
         ))}
       </div>

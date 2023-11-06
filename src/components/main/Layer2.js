@@ -1,5 +1,5 @@
-import { DividerW, DividerH } from '../Divider';
 import React, { useEffect, useState } from "react";
+import Divider from '../Dividers';
 
 const articles = [
   {
@@ -78,11 +78,11 @@ export default function Layer2() {
               <p className="text-[14px] leading-[20px] mymd:text-[16px] mymd:leading-[24px]">{article.description}</p>
             </div>
           </div>
-          {index < articles.length - 1 && <DividerW />}
+          {index < articles.length - 1 && <Divider dividerW w/>}
           </div>
         ))}
       </div>
-      {editorsSm? <DividerH/>:null}
+      {editorsSm? <Divider dividerH h/>:null}
      {editorsSm ?
       <div className="flex flex-col gap-3">
         <p className="editors-pick">Edıtor’s Pıck</p>

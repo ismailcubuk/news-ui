@@ -4,6 +4,7 @@ import Opinion from "./components/Opinion";
 import Layer1 from "./components/main/Layer1";
 import Layer2 from "./components/main/Layer2";
 import Footer from "./components/main/Footer";
+import Divider from "./components/Dividers";
 
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
           <Layer1 />
         </div>
         <div>
-          <div className="flex w-full h-12 flex-row justify-center items-center">
-            <div className="w-full border-2" />
-          </div>
+          <Divider dividerSection w />
           <Layer2 />
         </div>
         <Footer />
