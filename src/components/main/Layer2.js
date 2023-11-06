@@ -78,9 +78,9 @@ export default function Layer2() {
       <div className="flex flex-col items-start">
         {articles.map((article, index) => (
           <div key={index}>
-            <div className={`flex flex-col mysm:flex-row gap-6 ${index === 2 ? 'row-span-2 flex-col' : ''}`}>
+            <div className={`${index === 2 ? 'flex-row' : ''}flex flex-col mysm:flex-row gap-6 `}>
             <div className="flex flex-row items-center">
-              <img src={article.imgSrc} alt={`thumb${index + 5}`}  className="w-20 h-11 mysm:h-fit mysm:w-fit"/>
+              <img src={article.imgSrc} alt={`thumb${index + 5}`}  className="w-20 h-11 mysm:h-full mysm:w-full"/>
               {hoursSm ? <p className="hours ml-3">{article.hoursAgo}</p> : null}
             </div>
             <div className="flex flex-col gap-2 mysm:gap-3 ">
