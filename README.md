@@ -1,23 +1,90 @@
-# Getting Started with Create React App
+# News UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Responsive news interface built with React. It displays news and media content with a modern design featuring carousel, opinion sections, and organized content layers.
 
-## Available Scripts
+Live demo: [News UI](https://ismailcubuk.github.io/news-ui/)
 
-In the project directory, you can run:
+![Preview](./public/images/screenshots/preview.png)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Display news and media content
+- Carousel component for featured articles
+- Opinion section for highlights
+- Responsive design for desktop, tablet, and mobile
+- Modern navigation bar
+- Professional footer
+- Organized content layers
+- Image galleries with thumbnails
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- React 18
+- Tailwind CSS
+- React Icons
+- JavaScript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
+
+```text
+src/
+  components/
+    navbar/
+      Navbar.js
+    main/
+      Carousel.js
+      Layer1.js
+      Layer2.js
+      Footer.js
+      LeftSection.js
+      MiddleSection.js
+      PopularSection.js
+    Opinion.js
+    Dividers.js
+  images/
+    background/
+    profilePictures/
+    thumbs/
+  svg/
+    Logo.jsx
+  App.js
+  index.css
+  index.js
+```
+
+## Installation
+
+Install the required packages:
+
+```bash
+npm install
+```
+
+## Running
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The application will open at [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Build
+
+Create a production-ready build:
+
+```bash
+npm build
+```
+
+## Deployment
+
+To deploy on GitHub Pages:
+
+```bash
+npm run deploy
+```
 
 ### `npm run build`
 
